@@ -14,5 +14,11 @@ public class LibraryItem {
 		this.isAvailable = true;
 	}
 	
+	public int getId() {
+		return id;
+	}
 	
+	public String getTitle() {
+		return title;
+	}
 }
