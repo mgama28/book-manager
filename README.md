@@ -9,3 +9,12 @@ SE 350 Project
 – If you are in a group, does everyone have access to the github repo? No
 – Do you have a “Hello World” program that compiles and runs? Yes
 – Where is the entry point to your project? (src/main/Main.java for example) book-manager/workspace/bookManager/src/main/Main.java
+
+
+## Project
+Library Management System
+
+## Libraries
+- JavaFX (will be added later)
+- JUnit (for testing)
+
