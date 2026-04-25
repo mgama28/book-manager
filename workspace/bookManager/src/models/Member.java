@@ -25,4 +25,28 @@ public class Member {
 		this.checkedOutBooks = new ArrayList<>();
 		
 	}
+	
+	public int getMemberId() {
+		return memberId;
+	}
+	
+	public String getMemberName() {
+		return firstName + ' ' + lastName;
+	}
+	
+	public String getMemberEmail() {
+		return memberEmail;
+	}
+	
+	public String getDOB() {
+		return dob;
+	}
+	
+	public LocalDate getMembershipDate() {
+		return membershipDate;
+	}
+	
+	public List<Book> getCheckedOutBooks() {
+		return checkedOutBooks;
+	}
 }

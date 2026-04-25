@@ -14,4 +14,16 @@ public class Book extends LibraryItem {
 		this.bookYear = year;
 
 	}
+	
+	public String getBookAuthor() {
+		return bookAuthor;
+	}
+	
+	public String getBookGenre() {
+		return bookGenre;
+	}
+	
+	public int getBookYear() {
+		return bookYear;
+	}
 }
