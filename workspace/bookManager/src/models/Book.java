@@ -1,10 +1,19 @@
 package models;
+import interfaces.Printable;
 
-public class Book extends LibraryItem {
+public class Book extends LibraryItem implements Printable {
 	
 	private String bookAuthor;
 	private String bookGenre;
 	private int bookYear;
+	
+	@Override
+	public void print() {
+		System.out.println("Book ID: " + getId());
+		System.out.println("Title: " + getTitle());
+		System.out.println("Author: " + bookAuthor );
+		System.out.println("Genre: " + bookGenre);
+	}
 	
 	
 	public Book(int id, String title, String author, String genre, int year) {

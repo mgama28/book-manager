@@ -1,11 +1,21 @@
 package models;
+import interfaces.Borrowable;
 
-public class LibraryItem {
+public abstract class LibraryItem implements Borrowable {
 	
 	private int id;
 	private String title;
 	private boolean isAvailable;
 	
+	@Override
+	public void checkOut() {
+		isAvailable = false;
+	}
+	
+	@Override
+	public void returnedItem() {
+		isAvailable = true;
+	}
 	
 	public LibraryItem(int id, String title) {
 		
@@ -20,5 +30,9 @@ public class LibraryItem {
 	
 	public String getTitle() {
 		return title;
+	}
+	
+	public boolean isAvailable() {
+		return isAvailable;
 	}
 }
