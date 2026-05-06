@@ -1,5 +1,5 @@
 package interfaces;
 
-public interface Printable {
+public interface IPrintable {
 	void print();
 }

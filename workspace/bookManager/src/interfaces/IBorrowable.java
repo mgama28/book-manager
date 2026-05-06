@@ -1,6 +1,6 @@
 package interfaces;
 
-public interface Borrowable {
+public interface IBorrowable {
 	void checkOut();
 	void returnedItem();
 }

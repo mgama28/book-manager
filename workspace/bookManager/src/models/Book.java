@@ -1,7 +1,7 @@
 package models;
-import interfaces.Printable;
+import interfaces.IPrintable;
 
-public class Book extends LibraryItem implements Printable {
+public class Book extends LibraryItem implements IPrintable {
 	
 	private String bookAuthor;
 	private String bookGenre;

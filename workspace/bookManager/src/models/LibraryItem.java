@@ -1,7 +1,7 @@
 package models;
-import interfaces.Borrowable;
+import interfaces.IBorrowable;
 
-public abstract class LibraryItem implements Borrowable {
+public abstract class LibraryItem implements IBorrowable {
 	
 	private int id;
 	private String title;
