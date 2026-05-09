@@ -1,7 +1,8 @@
 package models;
 import interfaces.IBorrowable;
+import interfaces.IPrintable;
 
-public abstract class LibraryItem implements IBorrowable {
+public abstract class LibraryItem implements IBorrowable, IPrintable {
 	
 	private int id;
 	private String title;
@@ -11,17 +12,8 @@ public abstract class LibraryItem implements IBorrowable {
 	private int duration;
 	private boolean isAvailable;
 	
-	@Override
-	public void checkOut() {
-		isAvailable = false;
-	}
 	
-	@Override
-	public void returnedItem() {
-		isAvailable = true;
-	}
-	
-	public LibraryItem(int id, String title, String creator,String genre, int year, int duration) {
+public LibraryItem(int id, String title, String creator,String genre, int year, int duration) {
 		
 		this.id = id;
 		this.title = title;
@@ -55,4 +47,17 @@ public abstract class LibraryItem implements IBorrowable {
 	public boolean isAvailable() {
 		return isAvailable;
 	}
+	
+	public abstract void print();
+	@Override
+	public void checkOut() {
+		isAvailable = false;
+	}
+	
+	@Override
+	public void returnedItem() {
+		isAvailable = true;
+	}
+	
+	
 }

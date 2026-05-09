@@ -1,13 +1,16 @@
 package main;
 
-import models.Book;
+import models.LibraryItem;
 import catalog.Catalog;
 import java.util.Scanner;
+import factory.BookFactory;
+
 
 public class Main {
 	public static void main(String[] args) {
 		Catalog catalog = new Catalog();
 		Scanner scanner = new Scanner(System.in);
+		BookFactory bookFactory = new BookFactory();
 		
 		boolean running = true;
 		
@@ -19,11 +22,15 @@ public class Main {
 			System.out.println("Enter Choice: ");
 			
 			int choice = scanner.nextInt();
+			scanner.nextLine();
 			
 			switch (choice) {
 			case 1:
+				System.out.print("Enter type (ebook/audiobook/physical): ");
+				String type = scanner.nextLine();
 				System.out.print("Enter id: ");
 				int id = scanner.nextInt();
+				scanner.nextLine();
 				System.out.print("Enter title: ");
 				String title = scanner.nextLine();
 				System.out.print("Enter Author's Name: ");
@@ -32,7 +39,11 @@ public class Main {
 				String genre = scanner.nextLine();
 				System.out.print("Enter release year: ");
 				int year = scanner.nextInt();
-				Book book = new Book(id, title, author, genre, year);
+				scanner.nextLine();
+				System.out.print("Enter duration (0 for physical): ");
+				int duration = scanner.nextInt();
+				scanner.nextLine();
+				LibraryItem book = bookFactory.createItem(type, id, title, author, genre, year, duration);
 				catalog.addItem(book);
 				System.out.println("Book added successfully!");
 				break;
@@ -40,12 +51,20 @@ public class Main {
 				catalog.listAllItems();
 				break;
 			case 3:
-				catalog.searchByTitle(null);
+				System.out.print("Enter title to search: ");
+                String search = scanner.nextLine();
+                LibraryItem result = catalog.searchByTitle(search);
+                if (result != null) {
+                    System.out.println("Found: " + result.getTitle());
+                } else {
+                    System.out.println("Book not found!");
+                }
 				break;
 			case 4:
 				running = false;
 				break;
 			}
 		}
+		scanner.close();
 	}
 }

@@ -24,7 +24,7 @@ public class Catalog {
 	
 	public void listAllItems() {
 		for (LibraryItem item : items) {
-			System.out.println(item);
+			item.print();
 		}
 	}
 	
