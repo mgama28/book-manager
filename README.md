@@ -18,3 +18,9 @@ Library Management System
 - JavaFX (will be added later)
 - JUnit (for testing)
 
+## Final Submission Goals
+- I want a working library system where the user can add, search, checkout, and return items across different media types like: Books, Movies, Music, etc.
+- I would like to add more media types like games and other library items eventually to simulate a true library system.
+
+## Problems/Issues
+- I had to refactor libraryItem, I added creator, genre, and duration. Since they all share that similarity and I had to fix every class to reflect the change that I made in libraryItem.
