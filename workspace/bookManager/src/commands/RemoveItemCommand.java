@@ -4,17 +4,17 @@ import interfaces.ICommand;
 
 public class RemoveItemCommand implements ICommand{
 	
-	private int item;
+	private int id;
 	private Catalog catalog;
 	
-	public RemoveItemCommand(Catalog catalog, int item) {
-		this.item = item;
+	public RemoveItemCommand(Catalog catalog, int id) {
+		this.id = id;
 		this.catalog = catalog;
 	}
 	
 	@Override
 	public void execute() {
-		catalog.removeItem(item);
+		catalog.removeItem(id);
 	}
 
 }

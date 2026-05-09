@@ -3,36 +3,25 @@ import interfaces.IPrintable;
 
 public class Book extends LibraryItem implements IPrintable {
 	
-	private String bookAuthor;
-	private String bookGenre;
-	private int bookYear;
-	
 	@Override
 	public void print() {
 		System.out.println("Book ID: " + getId());
 		System.out.println("Title: " + getTitle());
-		System.out.println("Author: " + bookAuthor );
-		System.out.println("Genre: " + bookGenre);
+		System.out.println("Year: "+ getYear());
+		System.out.println("Author: " + creator);
+		System.out.println("Genre: " + getGenre());
 	}
 	
 	
-	public Book(int id, String title, String author, String genre, int year) {
-		super(id, title);
-		this.bookAuthor = author;
-		this.bookGenre = genre;
-		this.bookYear = year;
+	public Book(int id, String title, String author, String genre, int year, int duration) {
+		super(id, title, author, genre, year, 0);
+
 
 	}
 	
-	public String getBookAuthor() {
-		return bookAuthor;
+	public String getAuthor() {
+		return creator;
 	}
 	
-	public String getBookGenre() {
-		return bookGenre;
-	}
 	
-	public int getBookYear() {
-		return bookYear;
-	}
 }

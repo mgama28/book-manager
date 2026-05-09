@@ -2,44 +2,25 @@ package models;
 import interfaces.IPrintable;
 
 public class Movie extends LibraryItem implements IPrintable {
-	
-	private String movieDirector;
-	private String movieGenre;
-	private int movieYear;
-	private int movieDuration;
+
 	
 	@Override
 	public void print() {
 		System.out.println("Movie ID: " + getId());
 		System.out.println("Title: " + getTitle());
-		System.out.println("Movie Director: " + movieDirector);
-		System.out.println("Movie Year: " + movieYear);
-		System.out.println("Movie Duration: " + movieDuration);
-		
+		System.out.println("Year: " + getYear());
+		System.out.println("Movie Director: " + getDirector());
+		System.out.println("Movie Genre: " + getGenre());
+		System.out.println("Movie Duration: " + getDuration());
 	}
 	
 	public Movie(int id, String title, String director, String genre, int year, int duration) {
-		super(id, title);
-		this.movieDirector = director;
-		this.movieGenre = genre;
-		this.movieYear = year;
-		this.movieDuration = duration;
+		super(id, title, director, genre, year, duration);
 	}
 	
-	public String getMovieDirector() {
-		return movieDirector;
+	public String getDirector() {
+		return creator;
 	}
-	
-	public String getMovieGenre() {
-		return movieGenre;
-	}
-	
-	public int getMovieYear() {
-		return movieYear;
-	}
-	
-	public int getMovieDuration() {
-		return movieDuration;
-	}
+
 
 }
