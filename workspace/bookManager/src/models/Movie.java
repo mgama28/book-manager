@@ -1,8 +1,18 @@
 package models;
 import interfaces.IPrintable;
 
-public class Movie extends LibraryItem implements IPrintable {
+public abstract class Movie extends LibraryItem implements IPrintable {
 
+	
+	public Movie(int id, String title, String director, String genre, int year, int duration) {
+		super(id, title, director, genre, year, duration);
+	}
+	
+	public abstract String getType();
+	
+	public String getDirector() {
+		return creator;
+	}
 	
 	@Override
 	public void print() {
@@ -13,14 +23,4 @@ public class Movie extends LibraryItem implements IPrintable {
 		System.out.println("Movie Genre: " + getGenre());
 		System.out.println("Movie Duration: " + getDuration());
 	}
-	
-	public Movie(int id, String title, String director, String genre, int year, int duration) {
-		super(id, title, director, genre, year, duration);
-	}
-	
-	public String getDirector() {
-		return creator;
-	}
-
-
 }

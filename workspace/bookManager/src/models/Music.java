@@ -1,8 +1,17 @@
 package models;
 import interfaces.IPrintable;
 
-public class Music extends LibraryItem implements IPrintable {
+public abstract class Music extends LibraryItem implements IPrintable {
+
+	public Music(int id, String title, String artist, String genre, int year, int duration) {
+		super(id, title, artist, genre, year, duration);
+	}
 	
+	public abstract String getType();
+	
+	public String getArtist() {
+		return creator;
+	}
 	
 	@Override
 	public void print() {
@@ -13,15 +22,4 @@ public class Music extends LibraryItem implements IPrintable {
 		System.out.println("Music Genre: " + getGenre());
 		System.out.println("Duration: " + getDuration());
 	}
-	
-	public Music(int id, String title, String artist, String genre, int year, int duration) {
-		super(id, title, artist, genre, year, duration);
-
-	}
-	
-	public String getArtist() {
-		return creator;
-	}
-
-	
 }
