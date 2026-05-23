@@ -1,15 +1,5 @@
 # book-manager
 SE 350 Project
-– Are you in a Group? No
-– If so, who else is in your group? None
-– What programming language are you selecting? Java Which version? 21.0.6
-– Do you have your GitHub account set up? Yes
-– Do you have a public repository for your Project? Yes
-– What is the link to your GitHub repository? https://github.com/mgama28/book-manager
-– If you are in a group, does everyone have access to the github repo? No
-– Do you have a “Hello World” program that compiles and runs? Yes
-– Where is the entry point to your project? (src/main/Main.java for example) book-manager/workspace/bookManager/src/main/Main.java
-
 
 ## Project
 Library Management System
@@ -19,8 +9,12 @@ Library Management System
 - JUnit (for testing)
 
 ## Final Submission Goals
-- I want a working library system where the user can add, search, checkout, and return items across different media types like: Books, Movies, Music, etc.
-- I would like to add more media types like games and other library items eventually to simulate a true library system.
+- Working library system where users can add, search, checkout and return items
+- Search by title, author, genre or year using Strategy pattern
+- Items have states (Available, CheckedOut, Reserved) using State pattern
+- Support for multiple media types (Books, Movies, Music) using Abstract Factory
 
 ## Problems/Issues
-- I had to refactor libraryItem, I added creator, genre, and duration. Since they all share that similarity and I had to fix every class to reflect the change that I made in libraryItem.
+- I had to refactor Simple Factory to Abstract Factory pattern
+- I had to refactor LibraryItem multiple times to add currentState, isReserved, and state methods
+- I still need to update Main.java to fully utilize all patterns
