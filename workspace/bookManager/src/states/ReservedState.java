@@ -12,7 +12,7 @@ public class ReservedState implements IState {
 	
 	@Override
 	public void checkOut() {
-		System.out.println("");
+		System.out.println("ERROR: Item is reserved, cannot be checked out.");
 	}
 	
 	@Override

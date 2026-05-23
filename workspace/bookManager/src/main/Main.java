@@ -4,6 +4,10 @@ import models.LibraryItem;
 import catalog.Catalog;
 import java.util.Scanner;
 import factory.BookFactory;
+import strategies.SearchByTitle;
+import strategies.SearchByCreator;
+import strategies.SearchByGenre;
+import strategies.SearchByYear;
 
 
 public class Main {
@@ -51,14 +55,20 @@ public class Main {
 				catalog.listAllItems();
 				break;
 			case 3:
-				System.out.print("Enter title to search: ");
-                String search = scanner.nextLine();
-                LibraryItem result = catalog.searchByTitle(search);
-                if (result != null) {
-                    System.out.println("Found: " + result.getTitle());
-                } else {
-                    System.out.println("Book not found!");
-                }
+				System.out.println("Search by: 1. Title 2. Creator 3. Genre 4. Year");
+				int searchChoice = scanner.nextInt();
+				scanner.nextLine();
+				
+				switch(searchChoice) {
+				case 1: catalog.setSearchStrategy(new SearchByTitle()); break;
+				case 2: catalog.setSearchStrategy(new SearchByCreator()); break;
+				case 3: catalog.setSearchStrategy(new SearchByGenre()); break;
+				case 4: catalog.setSearchStrategy(new SearchByYear()); break;
+				}
+				
+				System.out.print("Enter Search term: ");
+				String search = scanner.nextLine();
+				
 				break;
 			case 4:
 				running = false;

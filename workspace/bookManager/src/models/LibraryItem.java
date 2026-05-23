@@ -37,6 +37,10 @@ public abstract class LibraryItem implements IPrintable {
 	public String getTitle() {
 		return title;
 	}
+	
+	public String getCreator() {
+		return creator;
+	}
 
 	public String getGenre() {
 		return genre;

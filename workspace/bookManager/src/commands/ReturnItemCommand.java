@@ -13,6 +13,6 @@ public class ReturnItemCommand implements ICommand{
 	
 	@Override
 	public void execute() {
-		item.returnedItem();
+		item.returnItem();
 	}
 }

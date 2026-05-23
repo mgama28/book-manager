@@ -1,6 +1,6 @@
 package catalog;
-
 import models.LibraryItem;
+import interfaces.ISearchStrategy;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,6 +8,7 @@ import java.util.List;
 public class Catalog {
 	
 	private List<LibraryItem> items;
+	private ISearchStrategy searchStrategy;
 	
 	public Catalog() {
 		this.items = new ArrayList<>();
@@ -28,12 +29,11 @@ public class Catalog {
 		}
 	}
 	
-	public LibraryItem searchByTitle(String title) {
-		for (LibraryItem item : items) {
-			if(item.getTitle().equalsIgnoreCase(title)) {
-				return item;
-			}
-		}
-		return null;
+	public void setSearchStrategy(ISearchStrategy searchStrategy) {
+		this.searchStrategy = searchStrategy;
+	}
+	
+	public List<LibraryItem> search(String searchTerm){
+		return searchStrategy.search(items, searchTerm);
 	}
 }
