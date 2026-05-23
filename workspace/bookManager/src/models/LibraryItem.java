@@ -1,8 +1,9 @@
 package models;
-import interfaces.IBorrowable;
 import interfaces.IPrintable;
+import interfaces.IState;
+import states.AvailableState;
 
-public abstract class LibraryItem implements IBorrowable, IPrintable {
+public abstract class LibraryItem implements IPrintable {
 	
 	private int id;
 	private String title;
@@ -11,17 +12,23 @@ public abstract class LibraryItem implements IBorrowable, IPrintable {
 	private int year;
 	private int duration;
 	private boolean isAvailable;
+	private boolean isReserved;
+	private IState currentState;
 	
 	
-public LibraryItem(int id, String title, String creator,String genre, int year, int duration) {
-		
-		this.id = id;
-		this.title = title;
-		this.creator = creator;
-		this.year = year;
-		this.duration = duration;
-		this.isAvailable = true;
-	}
+	public LibraryItem(int id, String title, String creator,String genre, int year, int duration) {
+			
+			this.id = id;
+			this.title = title;
+			this.creator = creator;
+			this.genre = genre;
+			this.year = year;
+			this.duration = duration;
+			this.isAvailable = true;
+			this.isReserved = false;
+			this.currentState = new AvailableState(this);
+		}
+//------------------------------------------------------
 	
 	public int getId() {
 		return id;
@@ -44,20 +51,60 @@ public LibraryItem(int id, String title, String creator,String genre, int year, 
 		return duration;
 	}
 	
+	// State ------------------------------------------------------
+	
+	//setter
+	public void setState(IState state) {
+		this.currentState = state;
+	}
+	
+	//getter
+	public IState getState() {
+		return currentState;
+	}
+	
+	//checkedOut
+	public void checkOut() {
+		currentState.checkOut();
+	}
+	
+	//returnItem
+	public void returnItem() {
+		currentState.returnItem();
+	}
+	
+	//reserve
+	public void reserve() {
+		currentState.reserve();
+	}
+	
+	// Available ------------------------------------------------------
+	
+	//setter
+	public void setAvailable(boolean available) {
+		this.isAvailable = available;
+	}
+	
+	//getter
 	public boolean isAvailable() {
 		return isAvailable;
 	}
 	
-	public abstract void print();
-	@Override
-	public void checkOut() {
-		isAvailable = false;
+	// Reserved ------------------------------------------------------
+	
+	//setter
+	public void setReserved(boolean reserved) {
+		this.isReserved = reserved;
 	}
 	
-	@Override
-	public void returnedItem() {
-		isAvailable = true;
+	//getter
+	public boolean isReserved() {
+		return isReserved;
 	}
+	
+	// Print ------------------------------------------------------
+	
+	public abstract void print();
 	
 	
 }
