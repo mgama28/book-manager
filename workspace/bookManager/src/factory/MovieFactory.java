@@ -1,25 +1,24 @@
 package factory;
-import interfaces.IFactory;
-import models.LibraryItem;
+import interfaces.IMovieFactory;
 import models.DVD;
 import models.BluRay;
 import models.DigitalMovie;
 
-public class MovieFactory implements IFactory {
-	
+public class MovieFactory implements IMovieFactory {
 	
 	@Override
-	public LibraryItem createItem(String type, int id, String title, String author, String genre, int year, int duration) {
-		switch(type) {
-		case "dvd":
-			return new DVD(id, title, genre, author, year, duration);
-		case "blu-ray":
-			return new BluRay(id, title, genre, author, year, duration);
-		case "digital movie":
-			return new DigitalMovie(id, title, genre, author, year, duration);
-		default:
-			return null;
-		}
+	public BluRay createBluRay(int id, String title, String artist, String genre, int year, int duration) {
+		return new BluRay(id, title, artist, genre, year, duration);
+	}
+	
+	@Override
+	public DigitalMovie createDigitalMovie(int id, String title, String artist, String genre, int year, int duration) {
+		return new DigitalMovie(id, title, artist, genre, year, duration);
+	}
+
+	@Override
+	public DVD createDVD(int id, String title, String artist, String genre, int year, int duration) {
+		return new DVD(id, title, artist, genre, year, duration);
 	}
 
 }

@@ -1,25 +1,27 @@
 package factory;
-import interfaces.IFactory;
-import models.LibraryItem;
+import interfaces.IMusicFactory;
+import models.DigitalMusic;
 import models.CD;
 import models.Vinyl;
-import models.DigitalMusic;
 
-public class MusicFactory implements IFactory {
+
+public class MusicFactory implements IMusicFactory {
 	
 	
 	@Override
-	public LibraryItem createItem(String type, int id, String title, String artist, String genre, int year, int duration) {
-		switch(type) {
-		case "cd":
-			return new CD(id, title, genre, artist,  year, duration);
-		case "vinyl":
-			return new Vinyl(id, title, genre, artist, year, duration);
-		case "digital music":
-			return new DigitalMusic(id, title, genre, artist, year, duration);
-		default:
-			return null;
-		}
+	public DigitalMusic createDigitalMusic(int id, String title, String artist, String genre, int year, int duration) {
+		return new DigitalMusic(id, title, artist, genre, year, duration);
 	}
+	
+	@Override
+	public CD createCD(int id, String title, String artist, String genre, int year, int duration) {
+		return new CD(id, title, artist, genre, year, duration);
+	}
+
+	@Override
+	public Vinyl createVinyl(int id, String title, String artist, String genre, int year, int duration) {
+		return new Vinyl(id, title, artist, genre, year, duration);
+	}
+	
 
 }

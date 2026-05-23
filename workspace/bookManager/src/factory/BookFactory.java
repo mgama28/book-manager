@@ -1,25 +1,26 @@
 package factory;
-import interfaces.IFactory;
-import models.LibraryItem;
+import interfaces.IBookFactory;
 import models.EBook;
 import models.PhysicalBook;
 import models.AudioBook;
 
-public class BookFactory implements IFactory {
+
+public class BookFactory implements IBookFactory {
 	
 	
 	@Override
-	public LibraryItem createItem(String type, int id, String title, String author, String genre, int year, int duration) {
-		switch(type) {
-		case "ebook":
-			return new EBook(id, title, genre, author,  year, duration);
-		case "audiobook":
-			return new AudioBook(id, title, genre, author, year, duration);
-		case "physical":
-			return new PhysicalBook(id, title, genre, author, year);
-		default:
-			return null;
-		}
+	public PhysicalBook createPhysicalBook(int id, String title, String author, String genre, int year) {
+		return new PhysicalBook(id, title, author, genre, year);
+	}
+	
+	@Override
+	public AudioBook createAudioBook(int id, String title, String author, String genre, int year, int duration) {
+		return new AudioBook(id, title, title, genre, year, duration);
+	}
+
+	@Override
+	public EBook createEBook(int id, String title, String author, String genre, int year, int duration) {
+		return new EBook(id, title, author, genre, year, duration);
 	}
 
 }
