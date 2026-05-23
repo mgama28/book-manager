@@ -1,9 +1,63 @@
 <mxfile host="app.diagrams.net">
   <diagram name="Page-1" id="wcMCi3oeLSEENpEqmBpU">
-    <mxGraphModel>
+    <mxGraphModel dx="2253" dy="743" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="NpHuQkZuoYly5ggiw39z-1" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;div&gt;ISearchStrategy&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="410" x="200" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NpHuQkZuoYly5ggiw39z-2" parent="NpHuQkZuoYly5ggiw39z-1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="+search(items: List&amp;lt;LibraryItem&amp;gt;, searchTerm: String) : List&amp;lt;LibraryItem&amp;gt;" vertex="1">
+          <mxGeometry height="30" width="410" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="NpHuQkZuoYly5ggiw39z-5" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="SearchByCreator" vertex="1">
+          <mxGeometry height="60" width="250" x="-80" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="NpHuQkZuoYly5ggiw39z-9" parent="NpHuQkZuoYly5ggiw39z-5" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="+search(items: List&amp;lt;LibraryItem&amp;gt;, searchTerm: String) : List&amp;lt;LibraryItem&amp;gt;" vertex="1">
+          <mxGeometry height="30" width="250" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="NpHuQkZuoYly5ggiw39z-10" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="SearchByTitle" vertex="1">
+          <mxGeometry height="60" width="240" x="190" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="NpHuQkZuoYly5ggiw39z-11" parent="NpHuQkZuoYly5ggiw39z-10" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="+search(items: List&amp;lt;LibraryItem&amp;gt;, searchTerm: String) : List&amp;lt;LibraryItem&amp;gt;" vertex="1">
+          <mxGeometry height="30" width="240" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="NpHuQkZuoYly5ggiw39z-12" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="SearchByGenre" vertex="1">
+          <mxGeometry height="60" width="270" x="450" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="NpHuQkZuoYly5ggiw39z-13" parent="NpHuQkZuoYly5ggiw39z-12" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="+search(items: List&amp;lt;LibraryItem&amp;gt;, searchTerm: String) : List&amp;lt;LibraryItem&amp;gt;" vertex="1">
+          <mxGeometry height="30" width="270" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="NpHuQkZuoYly5ggiw39z-14" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="SearchByYear" vertex="1">
+          <mxGeometry height="60" width="250" x="740" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="NpHuQkZuoYly5ggiw39z-15" parent="NpHuQkZuoYly5ggiw39z-14" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="+search(items: List&amp;lt;LibraryItem&amp;gt;, searchTerm: String) : List&amp;lt;LibraryItem&amp;gt;" vertex="1">
+          <mxGeometry height="30" width="250" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="NpHuQkZuoYly5ggiw39z-16" edge="1" parent="1" source="NpHuQkZuoYly5ggiw39z-5" style="endArrow=block;html=1;rounded=0;endFill=0;exitX=0.537;exitY=-0.033;exitDx=0;exitDy=0;dashed=1;entryX=-0.007;entryY=0.3;entryDx=0;entryDy=0;entryPerimeter=0;exitPerimeter=0;" target="NpHuQkZuoYly5ggiw39z-2" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="104" y="347" as="sourcePoint" />
+            <mxPoint x="80" y="100" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NpHuQkZuoYly5ggiw39z-17" edge="1" parent="1" source="NpHuQkZuoYly5ggiw39z-10" style="endArrow=block;html=1;rounded=0;endFill=0;exitX=0.52;exitY=-0.017;exitDx=0;exitDy=0;dashed=1;entryX=0.38;entryY=1.067;entryDx=0;entryDy=0;entryPerimeter=0;exitPerimeter=0;" target="NpHuQkZuoYly5ggiw39z-2" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="84" y="567" as="sourcePoint" />
+            <mxPoint x="60" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NpHuQkZuoYly5ggiw39z-18" edge="1" parent="1" source="NpHuQkZuoYly5ggiw39z-12" style="endArrow=block;html=1;rounded=0;endFill=0;dashed=1;entryX=0.81;entryY=1.067;entryDx=0;entryDy=0;entryPerimeter=0;" target="NpHuQkZuoYly5ggiw39z-2" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="724" y="627" as="sourcePoint" />
+            <mxPoint x="700" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NpHuQkZuoYly5ggiw39z-19" edge="1" parent="1" source="NpHuQkZuoYly5ggiw39z-14" style="endArrow=block;html=1;rounded=0;endFill=0;exitX=0.196;exitY=-0.067;exitDx=0;exitDy=0;dashed=1;entryX=0.998;entryY=0.3;entryDx=0;entryDy=0;entryPerimeter=0;exitPerimeter=0;" target="NpHuQkZuoYly5ggiw39z-2" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="244" y="607" as="sourcePoint" />
+            <mxPoint x="220" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
