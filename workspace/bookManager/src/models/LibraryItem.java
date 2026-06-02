@@ -11,9 +11,10 @@ public abstract class LibraryItem implements IPrintable {
 	private String genre;
 	private int year;
 	private int duration;
-	private boolean isAvailable;
+
 	private boolean isReserved;
 	private IState currentState;
+	private int quantity;
 	
 	
 	public LibraryItem(int id, String title, String creator,String genre, int year, int duration) {
@@ -24,9 +25,9 @@ public abstract class LibraryItem implements IPrintable {
 			this.genre = genre;
 			this.year = year;
 			this.duration = duration;
-			this.isAvailable = true;
 			this.isReserved = false;
 			this.currentState = new AvailableState(this);
+			this.quantity = 1;
 		}
 //------------------------------------------------------
 	
@@ -54,6 +55,7 @@ public abstract class LibraryItem implements IPrintable {
 	public int getDuration() {
 		return duration;
 	}
+	
 	
 	// State ------------------------------------------------------
 	
@@ -83,15 +85,8 @@ public abstract class LibraryItem implements IPrintable {
 	}
 	
 	// Available ------------------------------------------------------
-	
-	//setter
-	public void setAvailable(boolean available) {
-		this.isAvailable = available;
-	}
-	
-	//getter
 	public boolean isAvailable() {
-		return isAvailable;
+		return quantity > 0;
 	}
 	
 	// Reserved ------------------------------------------------------
@@ -106,6 +101,30 @@ public abstract class LibraryItem implements IPrintable {
 		return isReserved;
 	}
 	
+	
+	// Quantity ---------------------------------------------------
+	
+	//getter
+	public int getQuantity() {
+		return quantity;
+	}
+	
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
+	
+	
+	public void increaseQuantity() {
+		quantity++;
+	}
+	
+	public void decreaseQuantity() {
+		if(quantity > 0) {
+			quantity--;
+		}else {
+			System.out.println("No copies available!");
+		}
+	}
 	// Print ------------------------------------------------------
 	
 	public abstract void print();

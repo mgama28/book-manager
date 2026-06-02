@@ -12,8 +12,11 @@ public class AvailableState implements IState {
 	
 	@Override
 	public void checkOut() {
-		item.setAvailable(false);
-		item.setState(new CheckedOutState(item));
+		item.decreaseQuantity();
+		if (item.getQuantity() == 0) {
+			item.setState(new CheckedOutState(item));
+		}
+		
 	}
 	
 	@Override

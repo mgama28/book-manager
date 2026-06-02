@@ -17,7 +17,7 @@ public class CheckedOutState implements IState {
 	
 	@Override
 	public void returnItem() {
-		item.setAvailable(true);
+		item.increaseQuantity();
 		item.setState(new AvailableState(item));
 	}
 	

@@ -1,6 +1,7 @@
 package catalog;
 import models.LibraryItem;
 import interfaces.ISearchStrategy;
+import strategies.SearchByID;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,7 +17,13 @@ public class Catalog {
 
 	
 	public void addItem(LibraryItem item) {
-		items.add(item);
+		List<LibraryItem> existing = new SearchByID().search(items, String.valueOf(item.getId()));
+		if (!existing.isEmpty()) {
+			existing.get(0).increaseQuantity();
+			System.out.println("Item already exists, the quantity will be increased by 1");
+		} else {
+			items.add(item);
+		}
 	}
 	
 	public void removeItem(int id) {
