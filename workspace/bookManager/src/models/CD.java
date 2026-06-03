@@ -7,6 +7,6 @@ public class CD extends Music {
 	}
 	
 	public String getType() {
-		return "CD";
+		return "cd";
 	}
 }

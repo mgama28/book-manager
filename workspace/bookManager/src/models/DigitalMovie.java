@@ -7,6 +7,6 @@ public class DigitalMovie extends Movie {
 	}
 	
 	public String getType() {
-		return "Digital Movie";
+		return "digitalMovie";
 	}
 }

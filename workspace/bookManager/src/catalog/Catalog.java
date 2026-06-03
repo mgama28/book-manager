@@ -19,8 +19,12 @@ public class Catalog {
 	public void addItem(LibraryItem item) {
 		List<LibraryItem> existing = new SearchByID().search(items, String.valueOf(item.getId()));
 		if (!existing.isEmpty()) {
-			existing.get(0).increaseQuantity();
-			System.out.println("Item already exists, the quantity will be increased by 1");
+			if(existing.get(0).getType().equals(item.getType())) {
+				existing.get(0).increaseQuantity();
+				System.out.println("Item already exists, the quantity will be increased by 1");
+			}else {
+				System.out.println("ERROR: ID already in use by a different item type!");
+			}
 		} else {
 			items.add(item);
 		}
@@ -43,4 +47,9 @@ public class Catalog {
 	public List<LibraryItem> search(String searchTerm){
 		return searchStrategy.search(items, searchTerm);
 	}
+	
+	public int getCatalogSize() {
+		return items.size();
+	}
 }
+ 

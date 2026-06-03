@@ -10,6 +10,6 @@ public class AudioBook extends Book{
 	}
 	
 	public String getType() {
-		return "Audio Book";
+		return "audiobook";
 	}
 }

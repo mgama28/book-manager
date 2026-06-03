@@ -7,6 +7,6 @@ public class DigitalMusic extends Music {
 	}
 	
 	public String getType() {
-		return "Digital Music";
+		return "digitalMusic";
 	}
 }

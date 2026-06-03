@@ -10,6 +10,6 @@ public class PhysicalBook extends Book{
 	}
 	
 	public String getType() {
-		return "Physical";
+		return "physical";
 	}
 }

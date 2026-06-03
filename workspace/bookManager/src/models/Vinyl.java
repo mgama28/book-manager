@@ -7,6 +7,6 @@ public class Vinyl extends Music {
 	}
 	
 	public String getType() {
-		return "Vinyl";
+		return "vinyl";
 	}
 }

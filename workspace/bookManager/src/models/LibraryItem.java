@@ -129,5 +129,8 @@ public abstract class LibraryItem implements IPrintable {
 	
 	public abstract void print();
 	
+	// Type ------------------------------------------------------
+	
+	public abstract String getType();
 	
 }

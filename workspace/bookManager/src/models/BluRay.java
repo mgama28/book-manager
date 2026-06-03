@@ -7,6 +7,6 @@ public class BluRay extends Movie {
 	}
 	
 	public String getType() {
-		return "Blu-Ray";
+		return "bluray";
 	}
 }

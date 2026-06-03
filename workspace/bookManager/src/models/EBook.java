@@ -10,6 +10,6 @@ public class EBook extends Book{
 	}
 	
 	public String getType() {
-		return "EBook";
+		return "ebook";
 	}
 }

@@ -7,6 +7,6 @@ public class DVD extends Movie {
 	}
 	
 	public String getType() {
-		return "DVD";
+		return "dvd";
 	}
 }
