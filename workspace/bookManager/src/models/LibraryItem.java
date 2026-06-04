@@ -1,9 +1,13 @@
 package models;
+import java.util.List;
+import java.util.ArrayList;
 import interfaces.IPrintable;
 import interfaces.IState;
+import interfaces.ISubject;
+import interfaces.IObserver;
 import states.AvailableState;
 
-public abstract class LibraryItem implements IPrintable {
+public abstract class LibraryItem implements IPrintable, ISubject {
 	
 	private int id;
 	private String title;
@@ -15,6 +19,9 @@ public abstract class LibraryItem implements IPrintable {
 	private boolean isReserved;
 	private IState currentState;
 	private int quantity;
+	
+	private List<IObserver> observers;
+	
 	
 	
 	public LibraryItem(int id, String title, String creator,String genre, int year, int duration) {
@@ -28,6 +35,7 @@ public abstract class LibraryItem implements IPrintable {
 			this.isReserved = false;
 			this.currentState = new AvailableState(this);
 			this.quantity = 1;
+			this.observers = new ArrayList<>();
 		}
 //------------------------------------------------------
 	
@@ -55,6 +63,28 @@ public abstract class LibraryItem implements IPrintable {
 	public int getDuration() {
 		return duration;
 	}
+	
+	// ISubject ------------------------------------------------------
+	
+	@Override
+	public void addObserver(IObserver observer) {
+		observers.add(observer);
+	}
+	
+	@Override
+	public void removeObserver(IObserver observer) {
+		observers.remove(observer);
+	}
+	
+	@Override
+	public void notifyObservers(LibraryItem item) {
+		for(IObserver observer : observers) {
+			observer.update(item);
+		}
+	}
+	 
+	
+	
 	
 	
 	// State ------------------------------------------------------

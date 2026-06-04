@@ -1,6 +1,7 @@
 package states;
 import models.LibraryItem;
 import interfaces.IState;
+import interfaces.ISubject;
 
 public class CheckedOutState implements IState {
 	
@@ -19,6 +20,8 @@ public class CheckedOutState implements IState {
 	public void returnItem() {
 		item.increaseQuantity();
 		item.setState(new AvailableState(item));
+		item.notifyObservers(item);
+		
 	}
 	
 	@Override

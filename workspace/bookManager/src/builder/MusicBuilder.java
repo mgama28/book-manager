@@ -23,7 +23,7 @@ public class MusicBuilder {
 		return this;
 	}
 	
-	public MusicBuilder setArtistc(String artist) {
+	public MusicBuilder setArtist(String artist) {
 		this.artist = artist;
 		return this;
 	}

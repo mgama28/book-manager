@@ -1,11 +1,12 @@
 package models;
+import interfaces.IObserver;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
 
-public class Member {
+public class Member implements IObserver {
 	private int memberId;
 	private String firstName;
 	private String lastName;
@@ -48,5 +49,10 @@ public class Member {
 	
 	public List<Book> getCheckedOutBooks() {
 		return checkedOutBooks;
+	}
+	
+	@Override
+	public void update(LibraryItem item) {
+		System.out.println("Hey " + firstName + "!" + item.getTitle() + " is now available!");
 	}
 }
