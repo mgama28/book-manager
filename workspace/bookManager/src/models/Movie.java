@@ -18,9 +18,9 @@ public abstract class Movie extends LibraryItem implements IPrintable {
 	public void print() {
 		System.out.println("Movie ID: " + getId());
 		System.out.println("Title: " + getTitle());
-		System.out.println("Year: " + getYear());
 		System.out.println("Movie Director: " + getDirector());
 		System.out.println("Movie Genre: " + getGenre());
+		System.out.println("Year: " + getYear());
 		System.out.println("Movie Duration: " + getDuration());
 	}
 }
