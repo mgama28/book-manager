@@ -6,6 +6,7 @@ import interfaces.IState;
 import interfaces.ISubject;
 import interfaces.IObserver;
 import states.AvailableState;
+import states.ReservedState;
 
 public abstract class LibraryItem implements IPrintable, ISubject {
 	
@@ -16,7 +17,6 @@ public abstract class LibraryItem implements IPrintable, ISubject {
 	private int year;
 	private int duration;
 
-	private boolean isReserved;
 	private IState currentState;
 	private int quantity;
 	
@@ -32,7 +32,6 @@ public abstract class LibraryItem implements IPrintable, ISubject {
 			this.genre = genre;
 			this.year = year;
 			this.duration = duration;
-			this.isReserved = false;
 			this.currentState = new AvailableState(this);
 			this.quantity = 1;
 			this.observers = new ArrayList<>();
@@ -111,23 +110,14 @@ public abstract class LibraryItem implements IPrintable, ISubject {
 		currentState.reserve();
 	}
 	
+	public boolean isReserved() {
+	    return currentState instanceof ReservedState;
+	}
+	
 	// Available ------------------------------------------------------
 	public boolean isAvailable() {
 		return quantity > 0;
 	}
-	
-	// Reserved ------------------------------------------------------
-	
-	//setter
-	public void setReserved(boolean reserved) {
-		this.isReserved = reserved;
-	}
-	
-	//getter
-	public boolean isReserved() {
-		return isReserved;
-	}
-	
 	
 	// Quantity ---------------------------------------------------
 	

@@ -26,7 +26,6 @@ public class AvailableState implements IState {
 	
 	@Override
 	public void reserve() {
-		item.setReserved(true);
 		item.setState(new ReservedState(item));
 		
 	}
