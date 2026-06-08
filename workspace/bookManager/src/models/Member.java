@@ -1,6 +1,5 @@
 package models;
 import interfaces.IObserver;
-
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -13,7 +12,7 @@ public class Member implements IObserver {
 	private String memberEmail;
 	private String dob;
 	private LocalDate membershipDate;
-	private List<Book> checkedOutBooks;
+	private List<LibraryItem> checkedOutItems;
 
 	
 	public Member(int id, String first, String last, String email, String dob) {
@@ -23,7 +22,7 @@ public class Member implements IObserver {
 		this.memberEmail = email;
 		this.dob = dob;
 		this.membershipDate = LocalDate.now();
-		this.checkedOutBooks = new ArrayList<>();
+		this.checkedOutItems = new ArrayList<>();
 		
 	}
 	
@@ -47,8 +46,8 @@ public class Member implements IObserver {
 		return membershipDate;
 	}
 	
-	public List<Book> getCheckedOutBooks() {
-		return checkedOutBooks;
+	public List<LibraryItem> getCheckedOutItems() {
+		return checkedOutItems;
 	}
 	
 	@Override
