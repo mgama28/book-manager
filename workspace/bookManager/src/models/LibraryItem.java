@@ -81,6 +81,10 @@ public abstract class LibraryItem implements IPrintable, ISubject {
 			observer.update(item);
 		}
 	}
+	
+	public List<IObserver> getObservers(){
+		return observers;
+	}
 	 
 	
 	// State ------------------------------------------------------
