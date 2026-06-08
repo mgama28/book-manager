@@ -84,9 +84,6 @@ public abstract class LibraryItem implements IPrintable, ISubject {
 	}
 	 
 	
-	
-	
-	
 	// State ------------------------------------------------------
 	
 	//setter

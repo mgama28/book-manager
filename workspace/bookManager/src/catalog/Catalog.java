@@ -37,6 +37,7 @@ public class Catalog {
 	public void listAllItems() {
 		for (LibraryItem item : items) {
 			item.print();
+			System.out.println("--------------------------");
 		}
 	}
 	
