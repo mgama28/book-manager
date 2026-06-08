@@ -31,7 +31,7 @@ Library Management System
 ## Bugs
 
 - There are no bugs, except for the incomplete functionalities that weren't implemented
----
+
 ## Design Patterns List:
 
 ### Abstract Factory:
