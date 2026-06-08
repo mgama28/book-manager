@@ -1,34 +1,34 @@
 <mxfile host="app.diagrams.net">
   <diagram name="Page-1" id="wcMCi3oeLSEENpEqmBpU">
-    <mxGraphModel dx="2253" dy="743" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="2191" dy="743" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="NpHuQkZuoYly5ggiw39z-1" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;div&gt;ISearchStrategy&lt;/div&gt;" vertex="1">
+        <mxCell id="NpHuQkZuoYly5ggiw39z-1" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;div&gt;&lt;b&gt;ISearchStrategy&lt;/b&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="60" width="410" x="200" y="60" as="geometry" />
         </mxCell>
         <mxCell id="NpHuQkZuoYly5ggiw39z-2" parent="NpHuQkZuoYly5ggiw39z-1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="+search(items: List&amp;lt;LibraryItem&amp;gt;, searchTerm: String) : List&amp;lt;LibraryItem&amp;gt;" vertex="1">
           <mxGeometry height="30" width="410" y="30" as="geometry" />
         </mxCell>
-        <mxCell id="NpHuQkZuoYly5ggiw39z-5" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="SearchByCreator" vertex="1">
+        <mxCell id="NpHuQkZuoYly5ggiw39z-5" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="&lt;b&gt;SearchByCreator&lt;/b&gt;" vertex="1">
           <mxGeometry height="60" width="250" x="-80" y="170" as="geometry" />
         </mxCell>
         <mxCell id="NpHuQkZuoYly5ggiw39z-9" parent="NpHuQkZuoYly5ggiw39z-5" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="+search(items: List&amp;lt;LibraryItem&amp;gt;, searchTerm: String) : List&amp;lt;LibraryItem&amp;gt;" vertex="1">
           <mxGeometry height="30" width="250" y="30" as="geometry" />
         </mxCell>
-        <mxCell id="NpHuQkZuoYly5ggiw39z-10" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="SearchByTitle" vertex="1">
+        <mxCell id="NpHuQkZuoYly5ggiw39z-10" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="&lt;b&gt;SearchByTitle&lt;/b&gt;" vertex="1">
           <mxGeometry height="60" width="240" x="190" y="170" as="geometry" />
         </mxCell>
         <mxCell id="NpHuQkZuoYly5ggiw39z-11" parent="NpHuQkZuoYly5ggiw39z-10" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="+search(items: List&amp;lt;LibraryItem&amp;gt;, searchTerm: String) : List&amp;lt;LibraryItem&amp;gt;" vertex="1">
           <mxGeometry height="30" width="240" y="30" as="geometry" />
         </mxCell>
-        <mxCell id="NpHuQkZuoYly5ggiw39z-12" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="SearchByGenre" vertex="1">
+        <mxCell id="NpHuQkZuoYly5ggiw39z-12" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="&lt;b&gt;SearchByGenre&lt;/b&gt;" vertex="1">
           <mxGeometry height="60" width="270" x="450" y="170" as="geometry" />
         </mxCell>
         <mxCell id="NpHuQkZuoYly5ggiw39z-13" parent="NpHuQkZuoYly5ggiw39z-12" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="+search(items: List&amp;lt;LibraryItem&amp;gt;, searchTerm: String) : List&amp;lt;LibraryItem&amp;gt;" vertex="1">
           <mxGeometry height="30" width="270" y="30" as="geometry" />
         </mxCell>
-        <mxCell id="NpHuQkZuoYly5ggiw39z-14" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="SearchByYear" vertex="1">
+        <mxCell id="NpHuQkZuoYly5ggiw39z-14" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="&lt;b&gt;SearchByYear&lt;/b&gt;" vertex="1">
           <mxGeometry height="60" width="250" x="740" y="170" as="geometry" />
         </mxCell>
         <mxCell id="NpHuQkZuoYly5ggiw39z-15" parent="NpHuQkZuoYly5ggiw39z-14" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="+search(items: List&amp;lt;LibraryItem&amp;gt;, searchTerm: String) : List&amp;lt;LibraryItem&amp;gt;" vertex="1">
