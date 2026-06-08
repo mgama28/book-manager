@@ -13,25 +13,25 @@
         <mxCell id="NpHuQkZuoYly5ggiw39z-5" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="&lt;b&gt;SearchByCreator&lt;/b&gt;" vertex="1">
           <mxGeometry height="60" width="250" x="-80" y="170" as="geometry" />
         </mxCell>
-        <mxCell id="NpHuQkZuoYly5ggiw39z-9" parent="NpHuQkZuoYly5ggiw39z-5" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="+search(items: List&amp;lt;LibraryItem&amp;gt;, searchTerm: String) : List&amp;lt;LibraryItem&amp;gt;" vertex="1">
+        <mxCell id="NpHuQkZuoYly5ggiw39z-9" parent="NpHuQkZuoYly5ggiw39z-5" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="+search(items: List&amp;lt;LibraryItem&amp;gt;, searchItem: String) : List&amp;lt;LibraryItem&amp;gt;" vertex="1">
           <mxGeometry height="30" width="250" y="30" as="geometry" />
         </mxCell>
         <mxCell id="NpHuQkZuoYly5ggiw39z-10" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="&lt;b&gt;SearchByTitle&lt;/b&gt;" vertex="1">
           <mxGeometry height="60" width="240" x="190" y="170" as="geometry" />
         </mxCell>
-        <mxCell id="NpHuQkZuoYly5ggiw39z-11" parent="NpHuQkZuoYly5ggiw39z-10" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="+search(items: List&amp;lt;LibraryItem&amp;gt;, searchTerm: String) : List&amp;lt;LibraryItem&amp;gt;" vertex="1">
+        <mxCell id="NpHuQkZuoYly5ggiw39z-11" parent="NpHuQkZuoYly5ggiw39z-10" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="+search(items: List&amp;lt;LibraryItem&amp;gt;, searchItem: String) : List&amp;lt;LibraryItem&amp;gt;" vertex="1">
           <mxGeometry height="30" width="240" y="30" as="geometry" />
         </mxCell>
         <mxCell id="NpHuQkZuoYly5ggiw39z-12" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="&lt;b&gt;SearchByGenre&lt;/b&gt;" vertex="1">
           <mxGeometry height="60" width="270" x="450" y="170" as="geometry" />
         </mxCell>
-        <mxCell id="NpHuQkZuoYly5ggiw39z-13" parent="NpHuQkZuoYly5ggiw39z-12" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="+search(items: List&amp;lt;LibraryItem&amp;gt;, searchTerm: String) : List&amp;lt;LibraryItem&amp;gt;" vertex="1">
+        <mxCell id="NpHuQkZuoYly5ggiw39z-13" parent="NpHuQkZuoYly5ggiw39z-12" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="+search(items: List&amp;lt;LibraryItem&amp;gt;, searchItem: String) : List&amp;lt;LibraryItem&amp;gt;" vertex="1">
           <mxGeometry height="30" width="270" y="30" as="geometry" />
         </mxCell>
         <mxCell id="NpHuQkZuoYly5ggiw39z-14" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="&lt;b&gt;SearchByYear&lt;/b&gt;" vertex="1">
           <mxGeometry height="60" width="250" x="740" y="170" as="geometry" />
         </mxCell>
-        <mxCell id="NpHuQkZuoYly5ggiw39z-15" parent="NpHuQkZuoYly5ggiw39z-14" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="+search(items: List&amp;lt;LibraryItem&amp;gt;, searchTerm: String) : List&amp;lt;LibraryItem&amp;gt;" vertex="1">
+        <mxCell id="NpHuQkZuoYly5ggiw39z-15" parent="NpHuQkZuoYly5ggiw39z-14" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="+search(items: List&amp;lt;LibraryItem&amp;gt;, searchItem: String) : List&amp;lt;LibraryItem&amp;gt;" vertex="1">
           <mxGeometry height="30" width="250" y="30" as="geometry" />
         </mxCell>
         <mxCell id="NpHuQkZuoYly5ggiw39z-16" edge="1" parent="1" source="NpHuQkZuoYly5ggiw39z-5" style="endArrow=block;html=1;rounded=0;endFill=0;exitX=0.537;exitY=-0.033;exitDx=0;exitDy=0;dashed=1;entryX=-0.007;entryY=0.3;entryDx=0;entryDy=0;entryPerimeter=0;exitPerimeter=0;" target="NpHuQkZuoYly5ggiw39z-2" value="">
