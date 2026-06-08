@@ -6,14 +6,14 @@ SE 350 Project
 
 Library Management System
   
----
+
 ## Libraries
 
 - JavaFX (Didn't add)
 
 - JUnit (for testing)
 
- --- 
+
 
 ## Incomplete Functionality:
 
@@ -27,7 +27,7 @@ Library Management System
 
 - No UI
 
----
+
 ## Bugs
 
 - There's no bugs, except for the incomplete functionalities that weren't implemented
